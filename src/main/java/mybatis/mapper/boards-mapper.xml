@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boards">
+	<insert id="create" parameterType="hashmap">
+		INSERT INTO BOARDS (BOARD_ID, BOARD_PASS, TITLE, CONTENT, WRITER) 
+		VALUES(BOARDS_SEQ.NEXTVAL, #{boardPass}, #{title}, #{content}, #{writer})
+	</insert>
+	<insert id="createLogin" parameterType="hashmap">
+		INSERT INTO BOARDS(BOARD_ID,USER_ID,TITLE,CONTENT,WRITER)
+		VALUES(BOARDS_SEQ.NEXTVAL,#{userId},#{title},#{content},#{writer})
+	</insert>
+	<select id="findByBoardId" resultType="data.Board">
+		select * from boards where
+		board_id = #{boardId}
+	</select>
+	<select id="findByWrited" resultType="data.Board">
+		select * from boards order
+		by writed desc
+	</select>
+	<select id="findByViews" resultType="data.Board">
+		select * from boards order
+		by views desc
+	</select>
+	<select id="findByLikes" resultType="data.Board">
+		select * from boards order
+		by likes desc
+	</select>
+	
+</mapper>
