@@ -8,13 +8,16 @@
 <head>
 <meta charset="UTF-8">
 <title>B.O.A.R.D</title>
+<link rel="stylesheet" href="/resource/css/style.css?${millis }">
 </head>
 <body>
 <form action="/user/login-task">
-		<div>
+			<div style="text-align: center">
+			<h2>B.O.A.R.D</h2>
+		<div >
 			아이디 : <input type="text" name="id"/>
 		</div>
-		<div>
+		<div >
 			비밀번호 : <input type="password" name="pass"/>
 		</div>
 		<p>
@@ -23,6 +26,7 @@
 			</c:if>
 		</p>
 		<button>전송</button>
+	</div>
 	</form>
 
 </body>

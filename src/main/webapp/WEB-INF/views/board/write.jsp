@@ -10,7 +10,7 @@
 <title>B.O.R.A.D</title>
 </head>
 <body>
-
+	<div style="text-align: center">
 	<div>
 	<h2>디지털컨비전스-<small>공공데이터융합 자바 웹개발자 양성 과정</small></h2>
 	
@@ -36,5 +36,6 @@
 			<button>등록</button>
 		</div>
 	</form>
+	</div>
 </body>
 </html>
